@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header div.logo {
+    color: red;
+    padding: 5px;
+    border: 1px solid springgreen;
+    margin: 10px;
+    text-transform: uppercase;
+    font-family: 'DotGothic16', sans-serif;
+    font-size: 4rem;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+p {
+    color: goldenrod;
+}
+
+#contacts {
+    transform: rotate(180deg);
+}
+
+.banner {
+    background-image: url(../img/baby-yoda.svg);
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner h1 {
+    text-align: center;
+}
+
+.banner button {
+    margin: auto;
+    display: block;
+}
+
+.menu a {
+    display: block;
+}
+
+h2:hover {
+    text-decoration: underline;
+    color: firebrick;
+}
+
+p::first-letter {
+    font-size: 3rem;
+}
