@@ -5,53 +5,108 @@
     padding: 0;
 }
 
-header div.logo {
-    color: red;
-    padding: 5px;
-    border: 1px solid springgreen;
-    margin: 10px;
-    text-transform: uppercase;
+:root {
     font-family: 'DotGothic16', sans-serif;
-    font-size: 4rem;
+    scroll-behavior: smooth;
+    --main-color: black;
+    --accent-color: rgb(50, 206, 211);
 }
 
-h1, h2, h3 {
-    margin: 0;
+.container {
+    max-width: 980px;
+    margin: auto;
 }
 
-p {
-    color: goldenrod;
+header nav {
+    background-color: var(--accent-color);
+    padding: 5px;
 }
 
-#contacts {
-    transform: rotate(180deg);
+header .banner h1,
+header .logo {
+    font-size: 3.5rem;
+    text-align: center;
+    text-transform: uppercase;
 }
 
-.banner {
+header nav .menu {
+    display: flex;
+    flex-direction: column;
+}
+
+header nav .menu a {
+    color: var(--main-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0 5px;
+}
+
+header nav .menu a:hover {
+    font-weight: bold;
+}
+
+@media (min-width: 600px) {
+
+    header nav div.container {
+        display: flex;
+    }
+
+    header nav .menu {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        flex: 1;
+    }
+
+}
+
+header .banner {
     background-image: url(../img/baby-yoda.svg);
-    min-height: 400px;
     background-size: cover;
     background-position: center;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.banner h1 {
-    text-align: center;
+header .banner h1 {
+    color: var(--accent-color);
 }
 
-.banner button {
-    margin: auto;
+main .products > article {
+    border: 1px solid var(--main-color);
+    padding: 5px;
+}
+
+main .products > article img {
     display: block;
+    width: 100%;
 }
 
-.menu a {
-    display: block;
+main .products > article > .buttons {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5px;
 }
 
-h2:hover {
-    text-decoration: underline;
-    color: firebrick;
+@media (min-width: 500px) {
+    main .products {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+    }
 }
 
-p::first-letter {
-    font-size: 3rem;
+@media (min-width: 801px) {
+    main .products {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 980px) {
+    main .products {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
